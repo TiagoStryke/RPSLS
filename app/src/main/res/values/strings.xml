@@ -1,7 +1,8 @@
 <resources>
-    <string name="app_name">RPSLS</string>
+    <string name="app_name">Rock Paper Scissor Lizard Spock</string>
     <string name="game_on">GAME ON</string>
     <string name="a_game_developed_by_stryke_corp">A game developed by Stryke Corp.</string>
     <string name="rules">Rules</string>
-    <string name="todo">TODO</string>
+    <string name="help_rules">Help and Rules</string>
+    <string name="exit_tutorial">exit_tutorial</string>
 </resources>

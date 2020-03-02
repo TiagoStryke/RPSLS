@@ -123,21 +123,19 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
-        android:layout_marginEnd="5dp"
-        android:layout_marginRight="5dp"
         android:text="@string/rules"
-        android:textSize="18sp"
-        app:layout_constraintEnd_toStartOf="@+id/imageButton"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toStartOf="@+id/buttonHelp"
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageButton
-        android:id="@+id/imageButton"
+        android:id="@+id/buttonHelp"
         android:layout_width="31dp"
         android:layout_height="36dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@android:drawable/ic_menu_help"
-        android:contentDescription="@string/todo" />
+        android:contentDescription="@string/help_rules" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
