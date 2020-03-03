@@ -19,7 +19,7 @@ public class PopActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pop);
 
-        buttonExitTutorial = (ImageButton) findViewById(R.id.buttonExitTutorial);
+        buttonExitTutorial = findViewById(R.id.buttonExitTutorial);
         buttonExitTutorial.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
