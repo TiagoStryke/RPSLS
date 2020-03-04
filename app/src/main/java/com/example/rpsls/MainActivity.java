@@ -275,6 +275,8 @@ public class MainActivity extends AppCompatActivity {
         PlayerPoints = 0;
         TextViewComputerPoints.setText(Integer.toString(ComputerPoints));
         TextViewPlayerPoints.setText(Integer.toString(PlayerPoints));
+        TextViewResult.setText("GAME ON!");
+        TextViewResultPhrase.setText("");
         setAllCircleImageViewsTransparent();
     }
 
