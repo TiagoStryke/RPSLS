@@ -4,8 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/pop_bg"
-    tools:context=".PopActivity">
+    android:background="@drawable/rules_bg"
+    tools:context=".RulesActivity">
 
     <ImageButton
         android:id="@+id/buttonExitTutorial"

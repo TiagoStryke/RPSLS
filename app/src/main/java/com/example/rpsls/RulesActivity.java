@@ -1,7 +1,5 @@
 package com.example.rpsls;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.app.Activity;
 import android.os.Bundle;
 import android.util.DisplayMetrics;
@@ -10,14 +8,14 @@ import android.view.View;
 import android.view.WindowManager;
 import android.widget.ImageButton;
 
-public class PopActivity extends Activity {
+public class RulesActivity extends Activity {
 
     ImageButton buttonExitTutorial;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_pop);
+        setContentView(R.layout.activity_rules);
 
         buttonExitTutorial = findViewById(R.id.buttonExitTutorial);
         buttonExitTutorial.setOnClickListener(new View.OnClickListener() {

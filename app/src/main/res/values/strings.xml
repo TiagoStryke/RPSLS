@@ -1,6 +1,6 @@
 <resources>
     <string name="app_name">Rock Paper Scissor Lizard Spock</string>
-    <string name="game_on">GAME ON!</string>
+    <string name="textResult">GAME ON!</string>
     <string name="a_game_developed_by_stryke_corp">A game developed by Stryke Corp.</string>
     <string name="rules">Rules</string>
     <string name="help_rules">Help and Rules</string>
@@ -8,6 +8,11 @@
     <string name="text_rock_paper_scissor_lizard_spock">Rock Paper Scissor Lizard Spock</string>
     <string name="image_header">image header</string>
     <string name="textScore">SCORE:</string>
-    <string name="textYou">You -</string>
-    <string name="textComputer">Computer -</string>
+    <string name="textYou">You</string>
+    <string name="textComputer">Computer</string>
+    <string name="computerPoints">0</string>
+    <string name="playerPoints">0</string>
+    <string name="textReset">Reset</string>
+    <string name="textImageReset">Image Reset</string>
+    <string name="textResultPhrase">""</string>
 </resources>

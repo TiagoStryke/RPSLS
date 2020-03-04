@@ -7,81 +7,94 @@
     android:background="@drawable/main_bg"
     tools:context=".MainActivity">
 
+    <TextView
+        android:id="@+id/textViewPlayerPoints"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/playerPoints"
+        android:textColor="@android:color/black"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/textViewComputerPoints"
+        app:layout_constraintEnd_toEndOf="@+id/textViewComputerPoints" />
+
     <de.hdodenhof.circleimageview.CircleImageView
-        android:id="@+id/CircleImageViewRock"
+        android:id="@+id/circleImageViewRock"
         android:layout_width="96dp"
         android:layout_height="96dp"
         android:layout_marginEnd="50dp"
         android:layout_marginRight="50dp"
-        android:onClick="optionSelected"
+        android:onClick="optionRock"
         android:src="@drawable/rock"
-        app:civ_border_color="@color/colorBlack"
+        app:civ_border_color="@android:color/black"
         app:civ_border_width="3dp"
         app:layout_constraintEnd_toStartOf="@+id/guidelineVertical"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/guidelineHorizontal" />
 
     <de.hdodenhof.circleimageview.CircleImageView
-        android:id="@+id/CircleImageViewPaper"
+        android:id="@+id/circleImageViewPaper"
         android:layout_width="96dp"
         android:layout_height="96dp"
         android:layout_marginStart="50dp"
         android:layout_marginLeft="50dp"
+        android:onClick="optionPaper"
         android:src="@drawable/paper"
-        app:civ_border_color="@color/colorBlack"
+        app:civ_border_color="@android:color/black"
         app:civ_border_width="3dp"
         app:layout_constraintEnd_toStartOf="@+id/guidelineVertical"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/CircleImageViewRock" />
+        app:layout_constraintTop_toBottomOf="@+id/circleImageViewRock" />
 
     <de.hdodenhof.circleimageview.CircleImageView
-        android:id="@+id/CircleImageViewScissor"
+        android:id="@+id/circleImageViewScissor"
         android:layout_width="96dp"
         android:layout_height="96dp"
-        android:src="@drawable/scissors"
-        app:civ_border_color="@color/colorBlack"
+        android:onClick="optionScissor"
+        android:src="@drawable/scissor"
+        app:civ_border_color="@android:color/black"
         app:civ_border_width="3dp"
         app:layout_constraintEnd_toStartOf="@+id/guidelineVertical"
         app:layout_constraintStart_toStartOf="@+id/guidelineVertical"
-        app:layout_constraintTop_toBottomOf="@+id/CircleImageViewPaper" />
+        app:layout_constraintTop_toBottomOf="@+id/circleImageViewPaper" />
 
     <de.hdodenhof.circleimageview.CircleImageView
-        android:id="@+id/CircleImageViewLizard"
+        android:id="@+id/circleImageViewLizard"
         android:layout_width="96dp"
         android:layout_height="96dp"
         android:layout_marginEnd="50dp"
         android:layout_marginRight="50dp"
+        android:onClick="optionLizard"
         android:src="@drawable/lizard"
-        app:civ_border_color="@color/colorBlack"
+        app:civ_border_color="@android:color/black"
         app:civ_border_width="3dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@+id/guidelineVertical"
-        app:layout_constraintTop_toBottomOf="@+id/CircleImageViewSpock" />
+        app:layout_constraintTop_toBottomOf="@+id/circleImageViewSpock" />
 
     <de.hdodenhof.circleimageview.CircleImageView
-        android:id="@+id/CircleImageViewSpock"
+        android:id="@+id/circleImageViewSpock"
         android:layout_width="96dp"
         android:layout_height="96dp"
         android:layout_marginStart="50dp"
         android:layout_marginLeft="50dp"
+        android:onClick="optionSpock"
         android:src="@drawable/spock"
-        app:civ_border_color="@color/colorBlack"
+        app:civ_border_color="@android:color/black"
         app:civ_border_width="3dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@+id/guidelineVertical"
         app:layout_constraintTop_toTopOf="@+id/guidelineHorizontal" />
 
     <de.hdodenhof.circleimageview.CircleImageView
-        android:id="@+id/CircleImageViewComputer"
-        android:layout_width="96dp"
-        android:layout_height="96dp"
+        android:id="@+id/circleImageViewComputer"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
         android:src="@drawable/interrogation"
-        app:civ_border_color="@color/colorBlack"
-        app:civ_border_width="3dp"
+        app:civ_border_color="@color/colorAccent"
+        app:civ_border_width="5dp"
         app:layout_constraintBottom_toTopOf="@+id/guidelineHorizontal"
         app:layout_constraintEnd_toStartOf="@+id/guidelineVertical"
-        app:layout_constraintStart_toStartOf="@+id/guidelineVertical"
-        app:layout_constraintTop_toBottomOf="@+id/textViewResults" />
+        app:layout_constraintStart_toStartOf="@+id/guidelineVertical" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guidelineHorizontal"
@@ -99,7 +112,7 @@
 
 
     <TextView
-        android:id="@+id/textViewGameOn"
+        android:id="@+id/textViewResult"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="110dp"
@@ -107,8 +120,8 @@
         android:shadowDx="6"
         android:shadowDy="6"
         android:shadowRadius="4"
-        android:text="@string/game_on"
-        android:textColor="@color/colorBlack"
+        android:text="@string/textResult"
+        android:textColor="@android:color/black"
         android:textSize="60sp"
         app:layout_constraintEnd_toStartOf="@+id/guidelineVertical"
         app:layout_constraintHorizontal_bias="0.503"
@@ -128,15 +141,19 @@
         android:id="@+id/textViewRules"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginEnd="3dp"
+        android:layout_marginRight="3dp"
         android:text="@string/rules"
         android:textSize="12sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageButton
-        android:id="@+id/imageButtonHelp"
+        android:id="@+id/imageButtonRules"
         android:layout_width="31dp"
         android:layout_height="36dp"
+        android:layout_marginEnd="3dp"
+        android:layout_marginRight="3dp"
         android:background="@android:color/transparent"
         android:contentDescription="@string/help_rules"
         app:layout_constraintEnd_toEndOf="parent"
@@ -157,9 +174,11 @@
         android:id="@+id/textViewScore"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="3dp"
+        android:layout_marginLeft="3dp"
         android:layout_marginBottom="2dp"
         android:text="@string/textScore"
-        android:textColor="@color/colorBlack"
+        android:textColor="@android:color/black"
         android:textSize="18sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/textViewYou"
@@ -169,6 +188,8 @@
         android:id="@+id/textViewYou"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="3dp"
+        android:layout_marginLeft="3dp"
         android:text="@string/textYou"
         android:textColor="@android:color/background_dark"
         app:layout_constraintBottom_toTopOf="@+id/textViewComputer"
@@ -178,17 +199,66 @@
         android:id="@+id/textViewComputer"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="3dp"
+        android:layout_marginLeft="3dp"
         android:text="@string/textComputer"
-        android:textColor="@android:color/background_dark"
+        android:textColor="@color/colorComputer"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
-        android:id="@+id/textViewResults"
+        android:id="@+id/textViewComputerPoints"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintEnd_toStartOf="@+id/guidelineVertical"
-        app:layout_constraintTop_toBottomOf="@+id/textViewGameOn" />
+        android:layout_marginStart="5dp"
+        android:layout_marginLeft="5dp"
+        android:text="@string/computerPoints"
+        android:textColor="@color/colorAccent"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textViewComputer" />
+
+    <ImageView
+        android:id="@+id/imageViewReset"
+        android:layout_width="30dp"
+        android:layout_height="32dp"
+        android:contentDescription="@string/textImageReset"
+        android:onClick="resetGameButton"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/circleImageViewScissor"
+        app:layout_constraintStart_toEndOf="@+id/textViewPlayerPoints"
+        app:srcCompat="@drawable/icon" />
+
+    <TextView
+        android:id="@+id/textViewReset"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/textReset"
+        android:textColor="#C3FF0000"
+        android:textSize="12sp"
+        android:textStyle="italic"
+        app:layout_constraintBottom_toTopOf="@+id/imageViewReset"
+        app:layout_constraintEnd_toEndOf="@+id/imageViewReset"
+        app:layout_constraintStart_toStartOf="@+id/imageViewReset" />
+
+    <TextView
+        android:id="@+id/textViewResultPhrase"
+        android:gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:shadowColor="#000000"
+        android:shadowDx="1"
+        android:shadowDy="1"
+        android:shadowRadius="1"
+        android:text="@string/textResultPhrase"
+        android:textColor="#8C5CDF"
+        android:textSize="18sp"
+        android:textStyle="italic"
+        app:autoSizeTextType="uniform"
+        app:layout_constraintBottom_toTopOf="@+id/circleImageViewComputer"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewResult" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
