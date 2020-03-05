@@ -1,4 +1,4 @@
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
     <string name="app_name">Rock Paper Scissor Lizard Spock</string>
     <string name="textResult">GAME ON!</string>
     <string name="a_game_developed_by_stryke_corp">A game developed by Stryke Corp.</string>
@@ -15,4 +15,39 @@
     <string name="textReset">Reset</string>
     <string name="textImageReset">Image Reset</string>
     <string name="textResultPhrase">""</string>
+
+    <string name="textResultItsTie">IT\'S A TIE!</string>
+    <string name="textResultYouLose">YOU LOSE!</string>>
+    <string name="textResultYouWin">YOU WIN!</string>
+
+    <string name="textResultPhraseRockTie">"Ouch &#8230; with stone against stone you may break a bone."</string>
+    <string name="textResultPhraseRockLosePaper">"That's a nice wrap for such a ugly rock &#8230;"</string>
+    <string name="textResultPhraseRockLoseSpock">"Spock is vaping rocks tonight baby!"</string>
+    <string name="textResultPhraseRockWinScissor">"Your rock just crushed my scissor &#8230; and my dreams :("</string>
+    <string name="textResultPhraseRockWinLizard">"WOW, YOU PSYCHO! You just crushed my little lizard friend with that rock!"</string>
+
+    <string name="textResultPhrasePaperTie">"Paper,paper,paper &#8230; are we working for Dunder Mifflin?"</string>
+    <string name="textResultPhrasePaperLoseScissor" tools:ignore="Typos">"Chop chop chop &#8230; I'm cutting deep bro."</string>
+    <string name="textResultPhrasePaperLoseLizard">"Lizard is hungry, got eat some paper &#8230; I guess!?"</string>
+    <string name="textResultPhrasePaperWinSpock">"WHAT? How can paper disproves Spock?"</string>
+    <string name="textResultPhrasePaperWinRock">"Take your toilet paper from around my nice rock right now!"</string>
+
+    <string name="textResultPhraseScissorTie">"Wait &#8230; are you scissoring me? I'm gonna call the police!"</string>
+    <string name="textResultPhraseScissorLoseScissor">"ROuCK SMASH !!!."</string>
+    <string name="textResultPhraseScissorLoseSpock">"Spock is not running with scissors!"</string>
+    <string name="textResultPhraseScissorWinPaper">"Cut my paper into pieces &#8230; this is my last resort."</string>
+    <string name="textResultPhraseScissorWinLizard">"Jeez man, you just decapitated a little lizard?"</string>
+
+    <string name="textResultPhraseLizardTie">"Look its the Lizard of OZ and Queen Elizardbeth!"</string>
+    <string name="textResultPhraseLizardLoseRock">"With great stone comes great crushability."</string>
+    <string name="textResultPhraseLizardLoseScissor">"Relax man, I just cut the tail, it's gonna grow up again."</string>
+    <string name="textResultPhraseLizardWinPaper">"Come on, I'm telling the teacher you ate my homework!."</string>
+    <string name="textResultPhraseLizardWinSpock">"Congratulations! You just poisoned a geek symbol of our generation."</string>
+
+    <string name="textResultPhraseSpockTie">"DOUBLE SPOCK! DO NOT google that!"</string>
+    <string name="textResultPhraseSpockLosePaper">"Technology is never gonna replace the good old Paper!"</string>
+    <string name="textResultPhraseSpockLoseLizard" tools:ignore="Typos">"Rompopopom rompopopom rompopopom Spock man down."</string>
+    <string name="textResultPhraseSpockWinRock">"Sometimes life give you rocks, sometimes Spock vaporizes them&#8230;"</string>
+    <string name="textResultPhraseSpockWinScissor">"Spock is in the neighbourhood, hide your scissors, hide your wife."</string>
+
 </resources>

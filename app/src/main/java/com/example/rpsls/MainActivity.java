@@ -9,6 +9,7 @@ import android.view.View;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
+import java.util.Locale;
 import java.util.Random;
 
 import de.hdodenhof.circleimageview.CircleImageView;
@@ -76,32 +77,32 @@ public class MainActivity extends AppCompatActivity {
         this.setAllCircleImageViewsTransparent();
 
         if (ComputerOption == 0){
-            TextViewResult.setText("IT'S A TIE!");
-            TextViewResultPhrase.setText("\"Ouch ... with stone against stone you may break a bone.\"");
+            TextViewResult.setText(R.string.textResultItsTie);
+            TextViewResultPhrase.setText(R.string.textResultPhraseRockTie);
             CircleImageViewRock.setCircleBackgroundColor(Color.YELLOW);
             CircleImageViewComputer.setCircleBackgroundColor(Color.YELLOW);
         }else if (ComputerOption == 1 || ComputerOption == 4){
-            TextViewResult.setText("YOU LOSE!");
+            TextViewResult.setText(R.string.textResultYouLose);
             if (ComputerOption == 1){
-                TextViewResultPhrase.setText("\"That's a nice wrap for a suck a ugly rock ...\"");
+                TextViewResultPhrase.setText(R.string.textResultPhraseRockLosePaper);
             }else{
-                TextViewResultPhrase.setText("\"Spock is vaping rocks tonight baby!\"");
+                TextViewResultPhrase.setText(R.string.textResultPhraseRockLoseSpock);
             }
             CircleImageViewRock.setCircleBackgroundColor(Color.RED);
             CircleImageViewComputer.setCircleBackgroundColor(Color.GREEN);
             ComputerPoints++;
-            TextViewComputerPoints.setText(Integer.toString(ComputerPoints));
+            TextViewComputerPoints.setText(String.format(Locale.getDefault(), "%d", ComputerPoints));
         }else{
-            TextViewResult.setText("YOU WIN!");
+            TextViewResult.setText(R.string.textResultYouWin);
             if (ComputerOption == 2){
-                TextViewResultPhrase.setText("\"Your rock just crushed my scissor ... and my dreams :(\"");
+                TextViewResultPhrase.setText(R.string.textResultPhraseRockWinScissor);
             }else{
-                TextViewResultPhrase.setText("\"WOW, YOU PSYCHO! You just crushed my little lizard friend with that rock!\"");
+                TextViewResultPhrase.setText(R.string.textResultPhraseRockWinLizard);
             }
             CircleImageViewRock.setCircleBackgroundColor(Color.GREEN);
             CircleImageViewComputer.setCircleBackgroundColor(Color.RED);
             PlayerPoints++;
-            TextViewPlayerPoints.setText(Integer.toString(PlayerPoints));
+            TextViewPlayerPoints.setText(String.format(Locale.getDefault(), "%d", PlayerPoints));
         }
     }
 
@@ -111,32 +112,32 @@ public class MainActivity extends AppCompatActivity {
         this.setAllCircleImageViewsTransparent();
 
         if (ComputerOption == 1){
-            TextViewResult.setText("IT'S A TIE!");
-            TextViewResultPhrase.setText("\"Paper,paper,paper ... are we working for Dunder Mifflin?\"");
+            TextViewResult.setText(R.string.textResultItsTie);
+            TextViewResultPhrase.setText(R.string.textResultPhrasePaperTie);
             CircleImageViewPaper.setCircleBackgroundColor(Color.YELLOW);
             CircleImageViewComputer.setCircleBackgroundColor(Color.YELLOW);
         }else if (ComputerOption == 2 || ComputerOption == 3){
-            TextViewResult.setText("YOU LOSE!");
+            TextViewResult.setText(R.string.textResultYouLose);
             if (ComputerOption == 2){
-                TextViewResultPhrase.setText("\"Chop chop chop ... I'm cutting deep bro.\"");
+                TextViewResultPhrase.setText(R.string.textResultPhrasePaperLoseScissor);
             }else{
-                TextViewResultPhrase.setText("\"Lizard is hungry, got eat some paper ... I guess!?\"");
+                TextViewResultPhrase.setText(R.string.textResultPhrasePaperLoseLizard);
             }
             CircleImageViewPaper.setCircleBackgroundColor(Color.RED);
             CircleImageViewComputer.setCircleBackgroundColor(Color.GREEN);
             ComputerPoints++;
-            TextViewComputerPoints.setText(Integer.toString(ComputerPoints));
+            TextViewComputerPoints.setText(String.format(Locale.getDefault(), "%d", ComputerPoints));
         }else{
-            TextViewResult.setText("YOU WIN!");
+            TextViewResult.setText(R.string.textResultYouWin);
             if (ComputerOption == 4){
-                TextViewResultPhrase.setText("\"WHAT? How can paper disproves Spock?\"");
+                TextViewResultPhrase.setText(R.string.textResultPhrasePaperWinSpock);
             }else{
-                TextViewResultPhrase.setText("\"Take your toilet paper from around my nice rock right now!\"");
+                TextViewResultPhrase.setText(R.string.textResultPhrasePaperWinRock);
             }
             CircleImageViewPaper.setCircleBackgroundColor(Color.GREEN);
             CircleImageViewComputer.setCircleBackgroundColor(Color.RED);
             PlayerPoints++;
-            TextViewPlayerPoints.setText(Integer.toString(PlayerPoints));
+            TextViewPlayerPoints.setText(String.format(Locale.getDefault(), "%d", PlayerPoints));
         }
     }
 
@@ -146,32 +147,32 @@ public class MainActivity extends AppCompatActivity {
         this.setAllCircleImageViewsTransparent();
 
         if (ComputerOption == 2){
-            TextViewResult.setText("IT'S A TIE!");
-            TextViewResultPhrase.setText("\"Wait ... are you scissoring me? I'm gonna call the police!\"");
+            TextViewResult.setText(R.string.textResultItsTie);
+            TextViewResultPhrase.setText(R.string.textResultPhraseScissorTie);
             CircleImageViewScissor.setCircleBackgroundColor(Color.YELLOW);
             CircleImageViewComputer.setCircleBackgroundColor(Color.YELLOW);
         }else if (ComputerOption == 0 || ComputerOption == 4){
-            TextViewResult.setText("YOU LOSE!");
+            TextViewResult.setText(R.string.textResultYouLose);
             if (ComputerOption == 0){
-                TextViewResultPhrase.setText("\"ROuCK SMASH !!!.\"");
+                TextViewResultPhrase.setText(R.string.textResultPhraseScissorLoseScissor);
             }else{
-                TextViewResultPhrase.setText("\"Spock is not running with scissors!\"");
+                TextViewResultPhrase.setText(R.string.textResultPhraseScissorLoseSpock);
             }
             CircleImageViewScissor.setCircleBackgroundColor(Color.RED);
             CircleImageViewComputer.setCircleBackgroundColor(Color.GREEN);
             ComputerPoints++;
-            TextViewComputerPoints.setText(Integer.toString(ComputerPoints));
+            TextViewComputerPoints.setText(String.format(Locale.getDefault(), "%d", ComputerPoints));
         }else{
-            TextViewResult.setText("YOU WIN!");
+            TextViewResult.setText(R.string.textResultYouWin);
             if (ComputerOption == 1){
-                TextViewResultPhrase.setText("\"Cut my paper into pieces ... this is my last resort.\"");
+                TextViewResultPhrase.setText(R.string.textResultPhraseScissorWinPaper);
             }else{
-                TextViewResultPhrase.setText("\"Jeez man, you just decapitated a little lizard?\"");
+                TextViewResultPhrase.setText(R.string.textResultPhraseScissorWinLizard);
             }
             CircleImageViewScissor.setCircleBackgroundColor(Color.GREEN);
             CircleImageViewComputer.setCircleBackgroundColor(Color.RED);
             PlayerPoints++;
-            TextViewPlayerPoints.setText(Integer.toString(PlayerPoints));
+            TextViewPlayerPoints.setText(String.format(Locale.getDefault(), "%d", PlayerPoints));
         }
     }
 
@@ -181,32 +182,32 @@ public class MainActivity extends AppCompatActivity {
         this.setAllCircleImageViewsTransparent();
 
         if (ComputerOption == 3){
-            TextViewResult.setText("IT'S A TIE!");
-            TextViewResultPhrase.setText("\"Look its the Lizard of OZ and Queen Elizardbeth!\"");
+            TextViewResult.setText(R.string.textResultItsTie);
+            TextViewResultPhrase.setText(R.string.textResultPhraseLizardTie);
             CircleImageViewLizard.setCircleBackgroundColor(Color.YELLOW);
             CircleImageViewComputer.setCircleBackgroundColor(Color.YELLOW);
         }else if (ComputerOption == 0 || ComputerOption == 2){
-            TextViewResult.setText("YOU LOSE!");
+            TextViewResult.setText(R.string.textResultYouLose);
             if (ComputerOption == 0){
-                TextViewResultPhrase.setText("\"With great stone comes great crushability.\"");
+                TextViewResultPhrase.setText(R.string.textResultPhraseLizardLoseRock);
             }else{
-                TextViewResultPhrase.setText("\"Relax man, I just cut the tail, it's gonna grow up again.\"");
+                TextViewResultPhrase.setText(R.string.textResultPhraseLizardLoseScissor);
             }
             CircleImageViewLizard.setCircleBackgroundColor(Color.RED);
             CircleImageViewComputer.setCircleBackgroundColor(Color.GREEN);
             ComputerPoints++;
-            TextViewComputerPoints.setText(Integer.toString(ComputerPoints));
+            TextViewComputerPoints.setText(String.format(Locale.getDefault(), "%d", ComputerPoints));
         }else{
-            TextViewResult.setText("YOU WIN!");
+            TextViewResult.setText(R.string.textResultYouWin);
             if (ComputerOption == 1){
-                TextViewResultPhrase.setText("\"Come on, I'm telling the teacher you ate my homework!.\"");
+                TextViewResultPhrase.setText(R.string.textResultPhraseLizardWinPaper);
             }else{
-                TextViewResultPhrase.setText("\"Congratulations! You just poisoned a geek symbol of our generation.\"");
+                TextViewResultPhrase.setText(R.string.textResultPhraseLizardWinSpock);
             }
             CircleImageViewLizard.setCircleBackgroundColor(Color.GREEN);
             CircleImageViewComputer.setCircleBackgroundColor(Color.RED);
             PlayerPoints++;
-            TextViewPlayerPoints.setText(Integer.toString(PlayerPoints));
+            TextViewPlayerPoints.setText(String.format(Locale.getDefault(), "%d", PlayerPoints));
         }
     }
 
@@ -216,32 +217,32 @@ public class MainActivity extends AppCompatActivity {
         this.setAllCircleImageViewsTransparent();
 
         if (ComputerOption == 4){
-            TextViewResult.setText("IT'S A TIE!");
-            TextViewResultPhrase.setText("\"DOUBLE SPOCK! DO NOT google that!\"");
+            TextViewResult.setText(R.string.textResultItsTie);
+            TextViewResultPhrase.setText(R.string.textResultPhraseSpockTie);
             CircleImageViewSpock.setCircleBackgroundColor(Color.YELLOW);
             CircleImageViewComputer.setCircleBackgroundColor(Color.YELLOW);
         }else if (ComputerOption == 1 || ComputerOption == 3){
-            TextViewResult.setText("YOU LOSE!");
+            TextViewResult.setText(R.string.textResultYouLose);
             if (ComputerOption == 1){
-                TextViewResultPhrase.setText("\"Technology is never gonna replace the good old Paper!\"");
+                TextViewResultPhrase.setText(R.string.textResultPhraseSpockLosePaper);
             }else{
-                TextViewResultPhrase.setText("\"Rompopopom rompopopom rompopopom Spock man down.\"");
+                TextViewResultPhrase.setText(R.string.textResultPhraseSpockLoseLizard);
             }
             CircleImageViewSpock.setCircleBackgroundColor(Color.RED);
             CircleImageViewComputer.setCircleBackgroundColor(Color.GREEN);
             ComputerPoints++;
-            TextViewComputerPoints.setText(Integer.toString(ComputerPoints));
+            TextViewComputerPoints.setText(String.format(Locale.getDefault(), "%d", ComputerPoints));
         }else{
-            TextViewResult.setText("YOU WIN!");
+            TextViewResult.setText(R.string.textResultYouWin);
             if (ComputerOption == 0){
-                TextViewResultPhrase.setText("\"Sometimes life give you rocks, sometimes Spock vaporizes them...\"");
+                TextViewResultPhrase.setText(R.string.textResultPhraseSpockWinRock);
             }else{
-                TextViewResultPhrase.setText("\"Spock is in the neighbourhood, hide your scissors, hide your wife.\"");
+                TextViewResultPhrase.setText(R.string.textResultPhraseSpockWinScissor);
             }
             CircleImageViewSpock.setCircleBackgroundColor(Color.GREEN);
             CircleImageViewComputer.setCircleBackgroundColor(Color.RED);
             PlayerPoints++;
-            TextViewPlayerPoints.setText(Integer.toString(PlayerPoints));
+            TextViewPlayerPoints.setText(String.format(Locale.getDefault(), "%d", PlayerPoints));
         }
     }
 
@@ -273,9 +274,9 @@ public class MainActivity extends AppCompatActivity {
     public void resetGame(){
         ComputerPoints = 0;
         PlayerPoints = 0;
-        TextViewComputerPoints.setText(Integer.toString(ComputerPoints));
-        TextViewPlayerPoints.setText(Integer.toString(PlayerPoints));
-        TextViewResult.setText("GAME ON!");
+        TextViewComputerPoints.setText(String.format(Locale.getDefault(), "%d", ComputerPoints));
+        TextViewPlayerPoints.setText(String.format(Locale.getDefault(), "%d", PlayerPoints));
+        TextViewResult.setText(R.string.textResult);
         TextViewResultPhrase.setText("");
         setAllCircleImageViewsTransparent();
     }
