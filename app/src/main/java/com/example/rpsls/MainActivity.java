@@ -9,6 +9,9 @@ import android.view.View;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
+import com.daimajia.androidanimations.library.Techniques;
+import com.daimajia.androidanimations.library.YoYo;
+
 import java.util.Locale;
 import java.util.Random;
 
@@ -76,13 +79,17 @@ public class MainActivity extends AppCompatActivity {
         ComputerOption = this.optionComputer();
         this.setAllCircleImageViewsTransparent();
 
-        if (ComputerOption == 0){
+        YoYo.with(Techniques.RubberBand).duration(500).playOn(CircleImageViewRock);
+
+    if (ComputerOption == 0){
             TextViewResult.setText(R.string.textResultItsTie);
+            TextViewResult.setTextColor(Color.YELLOW);
             TextViewResultPhrase.setText(R.string.textResultPhraseRockTie);
             CircleImageViewRock.setCircleBackgroundColor(Color.YELLOW);
             CircleImageViewComputer.setCircleBackgroundColor(Color.YELLOW);
         }else if (ComputerOption == 1 || ComputerOption == 4){
             TextViewResult.setText(R.string.textResultYouLose);
+            TextViewResult.setTextColor(Color.RED);
             if (ComputerOption == 1){
                 TextViewResultPhrase.setText(R.string.textResultPhraseRockLosePaper);
             }else{
@@ -94,6 +101,7 @@ public class MainActivity extends AppCompatActivity {
             TextViewComputerPoints.setText(String.format(Locale.getDefault(), "%d", ComputerPoints));
         }else{
             TextViewResult.setText(R.string.textResultYouWin);
+            TextViewResult.setTextColor(Color.GREEN);
             if (ComputerOption == 2){
                 TextViewResultPhrase.setText(R.string.textResultPhraseRockWinScissor);
             }else{
@@ -111,13 +119,17 @@ public class MainActivity extends AppCompatActivity {
         ComputerOption = this.optionComputer();
         this.setAllCircleImageViewsTransparent();
 
+        YoYo.with(Techniques.RubberBand).duration(500).playOn(CircleImageViewPaper);
+
         if (ComputerOption == 1){
             TextViewResult.setText(R.string.textResultItsTie);
+            TextViewResult.setTextColor(Color.YELLOW);
             TextViewResultPhrase.setText(R.string.textResultPhrasePaperTie);
             CircleImageViewPaper.setCircleBackgroundColor(Color.YELLOW);
             CircleImageViewComputer.setCircleBackgroundColor(Color.YELLOW);
         }else if (ComputerOption == 2 || ComputerOption == 3){
             TextViewResult.setText(R.string.textResultYouLose);
+            TextViewResult.setTextColor(Color.RED);
             if (ComputerOption == 2){
                 TextViewResultPhrase.setText(R.string.textResultPhrasePaperLoseScissor);
             }else{
@@ -129,6 +141,7 @@ public class MainActivity extends AppCompatActivity {
             TextViewComputerPoints.setText(String.format(Locale.getDefault(), "%d", ComputerPoints));
         }else{
             TextViewResult.setText(R.string.textResultYouWin);
+            TextViewResult.setTextColor(Color.GREEN);
             if (ComputerOption == 4){
                 TextViewResultPhrase.setText(R.string.textResultPhrasePaperWinSpock);
             }else{
@@ -146,13 +159,17 @@ public class MainActivity extends AppCompatActivity {
         ComputerOption = this.optionComputer();
         this.setAllCircleImageViewsTransparent();
 
+        YoYo.with(Techniques.RubberBand).duration(500).playOn(CircleImageViewScissor);
+
         if (ComputerOption == 2){
             TextViewResult.setText(R.string.textResultItsTie);
+            TextViewResult.setTextColor(Color.YELLOW);
             TextViewResultPhrase.setText(R.string.textResultPhraseScissorTie);
             CircleImageViewScissor.setCircleBackgroundColor(Color.YELLOW);
             CircleImageViewComputer.setCircleBackgroundColor(Color.YELLOW);
         }else if (ComputerOption == 0 || ComputerOption == 4){
             TextViewResult.setText(R.string.textResultYouLose);
+            TextViewResult.setTextColor(Color.RED);
             if (ComputerOption == 0){
                 TextViewResultPhrase.setText(R.string.textResultPhraseScissorLoseScissor);
             }else{
@@ -164,6 +181,7 @@ public class MainActivity extends AppCompatActivity {
             TextViewComputerPoints.setText(String.format(Locale.getDefault(), "%d", ComputerPoints));
         }else{
             TextViewResult.setText(R.string.textResultYouWin);
+            TextViewResult.setTextColor(Color.GREEN);
             if (ComputerOption == 1){
                 TextViewResultPhrase.setText(R.string.textResultPhraseScissorWinPaper);
             }else{
@@ -181,13 +199,17 @@ public class MainActivity extends AppCompatActivity {
         ComputerOption = this.optionComputer();
         this.setAllCircleImageViewsTransparent();
 
+        YoYo.with(Techniques.RubberBand).duration(500).playOn(CircleImageViewLizard);
+
         if (ComputerOption == 3){
             TextViewResult.setText(R.string.textResultItsTie);
+            TextViewResult.setTextColor(Color.YELLOW);
             TextViewResultPhrase.setText(R.string.textResultPhraseLizardTie);
             CircleImageViewLizard.setCircleBackgroundColor(Color.YELLOW);
             CircleImageViewComputer.setCircleBackgroundColor(Color.YELLOW);
         }else if (ComputerOption == 0 || ComputerOption == 2){
             TextViewResult.setText(R.string.textResultYouLose);
+            TextViewResult.setTextColor(Color.RED);
             if (ComputerOption == 0){
                 TextViewResultPhrase.setText(R.string.textResultPhraseLizardLoseRock);
             }else{
@@ -199,6 +221,7 @@ public class MainActivity extends AppCompatActivity {
             TextViewComputerPoints.setText(String.format(Locale.getDefault(), "%d", ComputerPoints));
         }else{
             TextViewResult.setText(R.string.textResultYouWin);
+            TextViewResult.setTextColor(Color.GREEN);
             if (ComputerOption == 1){
                 TextViewResultPhrase.setText(R.string.textResultPhraseLizardWinPaper);
             }else{
@@ -216,13 +239,17 @@ public class MainActivity extends AppCompatActivity {
         ComputerOption = this.optionComputer();
         this.setAllCircleImageViewsTransparent();
 
+        YoYo.with(Techniques.RubberBand).duration(500).playOn(CircleImageViewSpock);
+
         if (ComputerOption == 4){
             TextViewResult.setText(R.string.textResultItsTie);
+            TextViewResult.setTextColor(Color.YELLOW);
             TextViewResultPhrase.setText(R.string.textResultPhraseSpockTie);
             CircleImageViewSpock.setCircleBackgroundColor(Color.YELLOW);
             CircleImageViewComputer.setCircleBackgroundColor(Color.YELLOW);
         }else if (ComputerOption == 1 || ComputerOption == 3){
             TextViewResult.setText(R.string.textResultYouLose);
+            TextViewResult.setTextColor(Color.RED);
             if (ComputerOption == 1){
                 TextViewResultPhrase.setText(R.string.textResultPhraseSpockLosePaper);
             }else{
@@ -234,6 +261,7 @@ public class MainActivity extends AppCompatActivity {
             TextViewComputerPoints.setText(String.format(Locale.getDefault(), "%d", ComputerPoints));
         }else{
             TextViewResult.setText(R.string.textResultYouWin);
+            TextViewResult.setTextColor(Color.GREEN);
             if (ComputerOption == 0){
                 TextViewResultPhrase.setText(R.string.textResultPhraseSpockWinRock);
             }else{
@@ -277,6 +305,7 @@ public class MainActivity extends AppCompatActivity {
         TextViewComputerPoints.setText(String.format(Locale.getDefault(), "%d", ComputerPoints));
         TextViewPlayerPoints.setText(String.format(Locale.getDefault(), "%d", PlayerPoints));
         TextViewResult.setText(R.string.textResult);
+        TextViewResult.setTextColor(Color.BLACK);
         TextViewResultPhrase.setText("");
         setAllCircleImageViewsTransparent();
     }

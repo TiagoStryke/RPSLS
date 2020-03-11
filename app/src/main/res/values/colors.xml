@@ -5,4 +5,6 @@
     <color name="colorAccent">#673AB7</color>
     <color name="colorBg">#6A6A68</color>
     <color name="colorComputer">#8C5CDF</color>
+    <color name="colorReset">#C3FF0000</color>
+
 </resources>

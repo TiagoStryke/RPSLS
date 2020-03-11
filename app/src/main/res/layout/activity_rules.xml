@@ -7,6 +7,16 @@
     android:background="@drawable/rules_bg"
     tools:context=".RulesActivity">
 
+    <TextView
+        android:id="@+id/textViewOwnerRights"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/a_game_developed_by_stryke_corp"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
     <ImageButton
         android:id="@+id/buttonExitTutorial"
         android:layout_width="15dp"

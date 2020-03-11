@@ -9,7 +9,7 @@
     <string name="image_header">image header</string>
     <string name="textScore">SCORE:</string>
     <string name="textYou">You</string>
-    <string name="textComputer">Computer</string>
+    <string name="textComputer">Phone</string>
     <string name="computerPoints">0</string>
     <string name="playerPoints">0</string>
     <string name="textReset">Reset</string>

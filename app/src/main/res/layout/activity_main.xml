@@ -13,9 +13,10 @@
         android:layout_height="wrap_content"
         android:text="@string/playerPoints"
         android:textColor="@android:color/black"
+        android:textSize="30sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/textViewComputerPoints"
-        app:layout_constraintEnd_toEndOf="@+id/textViewComputerPoints" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/textViewX" />
 
     <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/circleImageViewRock"
@@ -128,14 +129,7 @@
         app:layout_constraintStart_toStartOf="@+id/guidelineVertical"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/textViewOwnerRights"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/a_game_developed_by_stryke_corp"
-        android:textSize="12sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+
 
     <TextView
         android:id="@+id/textViewRules"
@@ -174,59 +168,57 @@
         android:id="@+id/textViewScore"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="3dp"
-        android:layout_marginLeft="3dp"
-        android:layout_marginBottom="2dp"
         android:text="@string/textScore"
         android:textColor="@android:color/black"
-        android:textSize="18sp"
+        android:textSize="25sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/textViewYou"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/textViewYou"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="3dp"
-        android:layout_marginLeft="3dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginLeft="4dp"
         android:text="@string/textYou"
         android:textColor="@android:color/background_dark"
-        app:layout_constraintBottom_toTopOf="@+id/textViewComputer"
-        app:layout_constraintStart_toStartOf="parent" />
+        android:textSize="25sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/textViewPlayerPoints"
+        app:layout_constraintStart_toEndOf="@+id/textViewScore" />
 
     <TextView
         android:id="@+id/textViewComputer"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="3dp"
-        android:layout_marginLeft="3dp"
         android:text="@string/textComputer"
         android:textColor="@color/colorComputer"
+        android:textSize="25sp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintEnd_toStartOf="@+id/imageViewReset"
+        app:layout_constraintStart_toEndOf="@+id/textViewComputerPoints" />
 
     <TextView
         android:id="@+id/textViewComputerPoints"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="5dp"
-        android:layout_marginLeft="5dp"
         android:text="@string/computerPoints"
         android:textColor="@color/colorAccent"
+        android:textSize="30sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/textViewComputer" />
+        app:layout_constraintStart_toEndOf="@+id/textViewX" />
 
     <ImageView
         android:id="@+id/imageViewReset"
+        android:tint="@color/colorReset"
         android:layout_width="30dp"
         android:layout_height="32dp"
         android:contentDescription="@string/textImageReset"
         android:onClick="resetGameButton"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/circleImageViewScissor"
-        app:layout_constraintStart_toEndOf="@+id/textViewPlayerPoints"
+        app:layout_constraintEnd_toEndOf="parent"
         app:srcCompat="@drawable/icon" />
 
     <TextView
@@ -234,7 +226,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/textReset"
-        android:textColor="#C3FF0000"
+        android:textColor="@color/colorReset"
         android:textSize="12sp"
         android:textStyle="italic"
         app:layout_constraintBottom_toTopOf="@+id/imageViewReset"
@@ -259,6 +251,16 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textViewResult" />
+
+    <TextView
+        android:id="@+id/textViewX"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="x"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/guidelineVertical"
+        app:layout_constraintStart_toStartOf="@+id/guidelineVertical" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
